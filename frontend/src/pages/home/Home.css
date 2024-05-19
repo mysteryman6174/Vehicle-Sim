@@ -1,0 +1,16 @@
+.scenario-select {
+  background: var(--color-foreground);
+  margin-bottom: var(--size-4);
+}
+
+.home-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,45 @@
+.error-container {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	background-color: #000000;
+	background-image: radial-gradient(#11581e, #041607), url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size: var(--size-6);
+	color: rgba(128, 255, 128, 0.8);
+	text-shadow:
+		0 0 1ex rgba(51, 255, 51, 1),
+		0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.terminal {
+	padding: var(--size-16);
+	text-transform: uppercase;
+}
+
+.errorcode {
+	color: white;
+}
+
+.output > a:hover{
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: var(--size-1);
+  transition-duration: 0.2s;
+}
+
+.output > a {
+	color: white;
+	text-decoration: none;
+}
+
+output > a::before {
+	content: "[";
+}
+
+.output > a::after {
+	content: "]";
+}

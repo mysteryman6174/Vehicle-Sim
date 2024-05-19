@@ -1,0 +1,31 @@
+.sidebar {
+	width: var(--size-56);
+	min-height: 100vh;
+	background: var(--color-navbg);
+}
+
+.sidebar-nav {
+	display: flex;
+	flex-direction: column;
+	margin-top: var(--size-12);
+	list-style: none;
+	gap: var(--size-4);
+	color: black;
+}
+
+.sidebar-nav-item {
+	padding: var(--size-3);
+	font-size: var(--size-5);
+	line-height: var(--size-7);
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.sidebar-nav-item:hover {
+	background: var(--color-navitem);
+}
+
+.sidebar-nav-item.active {
+	background: var(--color-navitem);
+	color: var(--color-blue);
+}

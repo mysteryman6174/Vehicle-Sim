@@ -1,0 +1,61 @@
+.scenario-container {
+	margin: var(--size-16) 0;
+}
+
+.scenario-container > p {
+	font-size: var(--size-8);
+	text-transform: capitalize;
+	margin-bottom: var(--size-12);
+}
+
+.button-group {
+	width: 100%;
+	margin-top: var(--size-4);
+	display: flex;
+	gap: var(--size-4);
+}
+
+.scenario-form {
+	background: var(--color-foreground);
+	display: flex;
+	justify-content: space-around;
+	padding: var(--size-16) 0;
+}
+
+.error {
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin-top: var(--size-2);
+	border-radius: var(--size-1);
+	text-align: center;
+	background: var(--color-red);
+}
+
+label {
+	position: relative;
+}
+
+input {
+	padding: var(--size-2) var(--size-4);
+	background: var(--color-background);
+	color: var(--color-text);
+	border: 0.1px solid var(--color-text);
+	border-radius: var(--size-1);
+	font-size: var(--size-4);
+}
+
+input::placeholder {
+	color: var(--color-text);
+}
+
+input[aria-invalid="true"] {
+	border: 1px solid var(--color-red);
+}
+
+label > span {
+	display: block;
+	padding: var(--size-1) var(--size-2);
+	font-size: var(--size-4);
+	font-weight: 300;
+}

@@ -1,0 +1,36 @@
+tbody {
+	background: var(--color-text);
+}
+
+tbody > tr {
+	text-align: center;
+	color: black;
+	border-bottom: 1px solid var(--color-foreground);
+}
+
+td > form {
+	cursor: pointer;
+}
+
+td {
+	padding: var(--size-1);
+	text-transform: capitalize;
+}
+
+table {
+	width: 100%;
+	table-layout: fixed;
+}
+
+thead {
+	font-size: var(--size-3);
+	line-height: var(--size-10);
+	color: var(--color-text);
+	text-transform: uppercase;
+	text-align: center;
+	background-color: var(--color-foreground);
+}
+
+th {
+	padding: var(--size-1) 0;
+}
