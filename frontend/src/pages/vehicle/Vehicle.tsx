@@ -63,8 +63,8 @@ function Vehicle({ mode = "add" }: props) {
 							type="number"
 							name="speed"
 							id="speed"
-							placeholder="10"
-							defaultValue={loaderData.vehicle?.speed}
+							placeholder="0"
+							defaultValue={loaderData.vehicle?.speed || 0}
 							aria-invalid={actionData?.errors?.speed?.length > 0}
 						/>
 						{actionData?.errors?.speed?.map((err, idx) => (
@@ -79,8 +79,8 @@ function Vehicle({ mode = "add" }: props) {
 							type="number"
 							name="posx"
 							id="posx"
-							placeholder="10"
-							defaultValue={loaderData.vehicle?.posx}
+							placeholder="0"
+							defaultValue={loaderData.vehicle?.posx || 0}
 							aria-invalid={actionData?.errors?.posx?.length > 0}
 						/>
 						{actionData?.errors?.posx?.map((err, idx) => (
@@ -95,8 +95,8 @@ function Vehicle({ mode = "add" }: props) {
 							type="number"
 							name="posy"
 							id="posy"
-							placeholder="10"
-							defaultValue={loaderData.vehicle?.posy}
+							placeholder="0"
+							defaultValue={loaderData.vehicle?.posy || 0}
 							aria-invalid={actionData?.errors?.posy?.length > 0}
 						/>
 						{actionData?.errors?.posy?.map((err, idx) => (
@@ -159,7 +159,6 @@ const action = async ({ request, params }: { request: any; params: any }) => {
 	}
 
 	let resp;
-	console.log("ALL OK")
 	switch (request.method) {
 		case "POST":
 			resp = await fetch(`/api/scenarios/${scenarioId}/vehicles`, {
@@ -181,7 +180,7 @@ const action = async ({ request, params }: { request: any; params: any }) => {
 	const data = await resp.json();
 
 	if (!resp.ok) {
-		return data;
+		throw new Error(data.message);
 	} else {
 		return redirect("/scenarios");
 	}

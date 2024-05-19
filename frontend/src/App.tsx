@@ -12,7 +12,7 @@ const route = createBrowserRouter([
 		element: <Layout />,
 		errorElement: <Error />,
 		children: [
-			{ path: "", index: true, element: <Home />, loader: Scenarios.loader, action: Home.action },
+			{ path: "", element: <Home />, loader: Scenarios.loader, action: Home.action },
 			{
 				path: "scenarios",
 				children: [

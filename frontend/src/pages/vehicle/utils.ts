@@ -10,8 +10,10 @@ export function validateData(data: Omit<VehicleType, "id">) {
 
 	if (data.speed < 0) {
 		errors.speed = ["Speed cannot be negative"];
-	} else if (data.speed == 0) {
+	} else if (data.speed === 0) {
 		errors.speed = ["Speed cannot be zero"];
+	} else if(data.speed === undefined) {
+		errors.speed = ["Speed is Required"];
 	}
 
 	if (data.posx < 0) {

@@ -25,8 +25,14 @@ function Home() {
 					))}
 				</select>
 			</label>
-			<VehiclesTable vehicles={loaderData[scenario].vehicles} scenarioId={loaderData[scenario].id} />
-			<Simulator vehicles={loaderData[scenario].vehicles} duration={loaderData[scenario].time} />
+			{loaderData.length > 0 ? (
+				<>
+					<VehiclesTable vehicles={loaderData[scenario].vehicles} scenarioId={loaderData[scenario].id} />
+					<Simulator vehicles={loaderData[scenario].vehicles} duration={loaderData[scenario].time} />
+				</>
+			) : (
+				<div>No Scenarios Found</div>
+			)}
 		</main>
 	);
 }
